@@ -1,0 +1,312 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#goTop{
+    width:  45px;
+    height: 45px;
+    display: none;
+    background-color: white;
+    position: fixed;
+    bottom: 55px;
+    right: 25px;
+    z-index: 111;
+    border-radius: 50%;
+    border: solid 10px rgb(227, 153, 5);
+    box-shadow: 0px 0px 3px 2px rgba(0,0,0,0.55);
+}
+
+#goTop img{
+    width: 40px;
+    height: 40px;
+    margin-top: 4px;
+    margin-left: 2px;
+}
+
+#goTop:hover{
+   cursor: pointer;
+}
+
+header{
+    background-image: url('../img/burger-fries.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.header-shadow{
+    background-color: rgb(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+
+.header-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 350px;
+    width: 750px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-text h1{
+    color: white;
+    font-size: 55px;
+}
+
+.header-text h1 span{
+    color:  rgb(227, 153, 5);
+    font-size: 55px;
+    text-shadow: 0px 2px 4px rgba(0,0,0,1);
+   
+}
+
+.header-text h3{
+    color: #cacaca;
+    margin-left: 90px;
+    margin-right: 90px;
+}
+
+.menu-button{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    border: solid 1px white;
+    border-radius: 15px;
+    padding: 10px 20px 10px 20px;
+    margin: 30px 0px;
+    transition: 0.4s;
+}
+
+.menu-button:hover{
+    background-color:rgb(255, 255, 255, 0.9);
+    color: black;
+    transition: 0.6s;
+}
+
+.navigation-bar{
+    top: 20px;
+    right: 50px;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    float: right;
+    height: 75px;
+}
+
+
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.ul-list a{
+    border-bottom: solid 2px  rgb(227, 153, 5, 0);
+    margin: 0px 15px;
+    padding: 0px 5px;
+    height: 25px;
+    text-align: center;
+    color:rgb(255, 255, 255);
+    transition: 0.4s;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.73s;
+}
+
+.ul-list a:hover{
+    border-bottom: solid 2px  rgb(227, 153, 5);
+    border-radius: 0;
+    color: rgb(227, 153, 5);
+    transition: 0.5s;
+}
+
+.ul-list .active{
+    border-bottom: solid 2px  rgb(227, 153, 5);
+    border-radius: 0;
+    color: rgb(227, 153, 5);
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    /*border: solid 1px red;*/
+}
+
+#food-section{
+    width: 100%;
+    height: 1200px;
+    display: flex;
+    flex-direction: column;
+    /*border: solid 1px blue;*/
+}
+
+.food-menu{
+    display: flex;
+    justify-content: space-evenly;
+    /*border: solid 1px green;*/
+}
+
+.drinks-menu{
+    display: flex;
+    justify-content:center;
+    /*border: solid 1px green;*/
+}
+
+.food-menu .item{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 300px;
+    background-color: rgba(253, 214, 142, 0.15);
+    border-radius: 25px;
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.75);
+}
+
+.drinks-menu .item{
+    
+    width: 18%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 0% 1%;
+    height: 300px;
+    background-color: rgba(253, 214, 142, 0.15);
+    border-radius: 25px;
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.75);
+}
+
+.item h2,h3{
+    margin: 5px 0 5px 0;
+}
+
+.item-button{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    border: solid 2px black;
+    border-radius: 15px;
+    background-color:rgb(224, 172, 13, 0.98);
+    padding: 10px 17px 10px 17px;
+    transition: 0.3s;
+    border: 1px solid;
+    
+    box-shadow: 1px 2px 0px 0px black;
+}
+
+.item-button:hover{
+   
+    color: rgb(0, 0, 0, );
+    transition: 0.13s;
+}
+
+.item-button:active{
+    border: 1px solid rgb(0, 0, 0, 0.5);;
+    box-shadow: 0px 1px;
+    background-color:rgba(214, 165, 16, 0.98);
+    transition: 0.09s;
+}
+
+.food-text-seperator{
+    text-align: center; 
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+    padding: 10px;
+    background-color: #c0742d36;
+}
+
+footer{
+    text-align: center;
+    color:  white;
+    background-color: rgb(204, 129, 17);
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 2px 0px 2px 0px;
+    font-size: 9px;
+}
+
+footer span{
+    color: black;
+   
+    font-weight: 800;
+}
+
+
+
+
+
+/*------------------media------------------*/
+
+@media (max-width: 770px){
+    .navigation-bar{
+        top: 20px;
+        right: 2%;
+        float: right;
+        
+    }
+
+    .ul-list a{
+        margin: 0px 8px;
+        font-size: 13px;
+    }
+
+    .header-text h1{
+        font-size: 8vw;
+    }
+
+    .header-text h3{
+        font-size: 4vw;
+        width: 70vw;
+    }
+
+    .food-menu{
+        flex-direction: column;
+        align-items: center;
+    }
+    .drinks-menu{
+        flex-direction: column;
+        align-items: center;
+        padding-bottom:170px;
+    }
+
+    .food-menu .item{
+        width: 70%;
+        margin-top: 25px;
+    }
+
+    .drinks-menu .item{
+        width: 60%;
+        margin-top: 25px;
+    }
+
+    footer{
+        position: fixed;
+        bottom: 0;
+    }
+    
+    #goTop{
+        right: 11px;
+
+    }
+    
+}
+
+
