@@ -34,13 +34,19 @@
             <div id="food-section">
                 <h1 class="food-text-seperator">Order Food</h1>
                 <div class="food-menu">
-                    
-                    <div class="item">
-                        <img src="img/menu/item1/burger.png" width="150px">
+
+                    <?php include "data/products.php";
+                        $product1['img'] = 'img/menu/item2/sandwich.png';
+                        echo'<div class="item">
+                        <img src="'.$product1['img'].'" width="150px">
                         <h2>Hamburger</h2>
                         <h3>€2.50</h3>
                         <a class="item-button" href="#food-menu">Order</a>
-                    </div>
+                        </div>
+                        ';
+                    ?>
+
+                   
                     <div class="item">
                         <img src="img/menu/item2/sandwich.png" width="150px">
                         <h2>Sandwich</h2>
