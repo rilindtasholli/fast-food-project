@@ -39,9 +39,9 @@
             <div class="navigation-bar">
                 <ul class="ul-list">
                     <a href="/" class="active">Home</a>
-                    <a href="pages/About-Us.html">About</a>
-                    <a href="pages/Contact Us.html">Contact</a>
-                    <a href="pages/Account.html">Account</a> 
+                    <a href="pages/About-Us.php">About</a>
+                    <a href="pages/Contact Us.php">Contact</a>
+                    <a href="pages/Account.php">Account</a> 
                 </ul>     
             </div>
         </header>
