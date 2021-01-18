@@ -51,59 +51,35 @@
                 <div class="food-menu">
 
                     <?php include "data/products.php";
-                        $product1['img'] = 'img/menu/item2/sandwich.png';
-                        echo'<div class="item">
-                        <img src="'.$product1['img'].'" width="150px">
-                        <h2>Hamburger</h2>
-                        <h3>€2.50</h3>
-                        <a class="item-button" href="#food-menu">Order</a>
-                        </div>
-                        ';
+                      
+                        foreach($food_products as $product){
+                            echo'<div class="item">
+                            <img src="'.$product['img'].'" width="150px">
+                            <h2>'.$product['name'].'</h2>
+                            <h3>€'.$product['price'].'</h3>
+                            <a class="item-button" href="#food-menu">Order</a>
+                            </div>
+                            ';
+                        }
                     ?>
 
-                   
-                    <div class="item">
-                        <img src="img/menu/item2/sandwich.png" width="150px">
-                        <h2>Sandwich</h2>
-                        <h3>€2.50</h3>
-                        <a class="item-button" href="#food-menu">Order</a>
-                    </div>
-                    <div class="item">
-                        <img src="img/menu/item3/french-fries.png" width="150px">
-                        <h2>French-Fries</h2>
-                        <h3>€2.50</h3>
-                        <a class="item-button" href="#food-menu">Order</a>
-                    </div>
                 </div>
-
 
                 <h1 class="food-text-seperator" style="margin-top: 12vh;">Order Drinks</h1>
                 <div class="drinks-menu">
-                    <div class="item">
-                        <img src="img/menu/drinks/coca-cola.png" width="58px">
-                        <h2>Coca-Cola</h2>
-                        <h3>€0.50</h3>
-                        <a class="item-button" href="#food-menu">Order</a>
-                    </div>
-                    <div class="item">
-                        <img src="img/menu/drinks/fanta.png" width="54px">
-                        <h2>Fanta</h2>
-                        <h3>€0.50</h3>
-                        <a class="item-button" href="#food-menu">Order</a>
-                    </div>
-                    <div class="item">
-                        <img src="img/menu/drinks/sprite.png" width="54px">
-                        <h2>Sprite</h2>
-                        <h3>€0.50</h3>
-                        <a class="item-button" href="#food-menu">Order</a>
-                    </div>
-                    <div class="item">
-                        <img src="img/menu/drinks/ice-tea.png" width="60px">
-                        <h2>Ice-Tea</h2>
-                        <h3>€0.50</h3>
-                        <a class="item-button" href="#food-menu">Order</a>
-                    </div>
-                    
+                        
+                <?php include "data/products.php";
+                      
+                      foreach($drink_products as $product){
+                          echo'<div class="item">
+                          <img src="'.$product['img'].'" width="55px">
+                          <h2>'.$product['name'].'</h2>
+                          <h3>€'.$product['price'].'</h3>
+                          <a class="item-button" href="#food-menu">Order</a>
+                          </div>
+                          ';
+                      }
+                  ?>
                     
                 </div>
                 
