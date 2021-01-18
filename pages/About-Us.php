@@ -11,16 +11,16 @@
     <body>
         
             <div class="container">
-
-            
+                    
                 <div class="header-shadow">
                 </div>
+
                 <div class="navigation-bar">
                   <ul class="ul-list">
-                      <a href="../index.html">Home</a>
-                      <a href="../pages/About-Us.html" class="active">About</a>
-                      <a href="../pages/Contact Us.html">Contact</a>
-                      <a href="../pages/Account.html">Account</a> 
+                      <a href="../index.php">Home</a>
+                      <a href="../pages/About-Us.php" class="active">About</a>
+                      <a href="../pages/Contact Us.php">Contact</a>
+                      <a href="../pages/Account.php">Account</a> 
                   </ul>     
                 </div>
                
