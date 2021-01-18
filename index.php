@@ -12,8 +12,23 @@
             <img src="img/up-arrow.webp"/>
         </div>
         <header>
+    
+            <div id="slideshow">
+            <div>
+                <img src="img/header-background/header-background-1.jpg">
+            </div>
+
+            <div>
+                <img src="img/header-background/header-background-2.jpg">
+            </div>
+            
+            <div>
+                <img src="img/header-background/header-background-3.jpg" >
+            </div>
+            </div>
             <div class="header-shadow">
             </div>
+           
             <div class="header-text">
                 <h1>Welcome to <span>[Star-Food]</span></h1>
                 <h3>Ekipi yne ka per synim te ju ofroj ushqim kualitativ, 
@@ -99,27 +114,13 @@
             <h2>  <span>&copy; Start-Food,</span> Prishtine - 2020</h2>
         </footer>
 
-        <script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
 
-            var goTop = document.getElementById("goTop");
+        <script src="js/main.js"></script>
 
+</body>
 
-            window.onscroll = function() {
-
-                if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-                    goTop.style.display = "block";
-                } else {
-                    goTop.style.display = "none";
-                }
-
-            };
-
-    
-            function goTopFunction() {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
-            }
-        </script>
-    </body>
+ 
 
 </html> 
