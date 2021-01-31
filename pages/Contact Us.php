@@ -17,10 +17,10 @@
 
         <div class="navigation-bar">
           <ul class="ul-list">
-              <a href="../index.html">Home</a>
-              <a href="../pages/About-Us.html">About</a>
-              <a href="../pages/Contact Us.html" class="active">Contact</a>
-              <a href="../pages/Account.html">Account</a> 
+              <a href="../index.php">Home</a>
+              <a href="../pages/About-Us.php">About</a>
+              <a href="../pages/Contact Us.php" class="active">Contact</a>
+              <a href="../pages/Account.php">Account</a> 
           </ul>     
       </div>
       
@@ -62,7 +62,7 @@
         </div>
         
 </div>    
-         
+<?php include '../components/footer.php';?>      
               
 
 <script>

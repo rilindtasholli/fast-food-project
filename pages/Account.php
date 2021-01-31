@@ -13,7 +13,7 @@
         <div class="header-shadow">
         </div>
        <div class="container">
-            <a id="home-button" class="home-button" href="../index.html">Home</a>
+            <a id="home-button" class="home-button" href="../index.php">Home</a>
            <div class="main-container">
                 <div class="button-at">
                     <button id="login-button" type="button" class="Login-Register login-button clicked" onclick="login()">Login</button>
@@ -43,7 +43,7 @@
            </div>
             
         </div>
-        
+        <?php include '../components/footer.php';?>      
         
     </body>
     
