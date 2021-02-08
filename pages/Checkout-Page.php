@@ -30,7 +30,7 @@
                             <td width="100%" height="100px">There are no products on your cart</td>
                         </tr>
                         <tr>
-                            <td width="100%" height="50px"><a href="../index.php">Add Products</a></td>
+                            <td width="100%" height="50px"><a class="addProductsButton" href="../index.php">Add Products</a></td>
                         </tr>
                     </table>
                     </div>
