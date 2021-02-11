@@ -81,6 +81,13 @@
                
                 
                 <ul class="ul-list">
+                    <?php
+                        if(isset($_SESSION['role'])){
+                        if($_SESSION['role']== 1){
+                            echo ' <a href="pages/Dashboard.php">Dashboard</a>';
+                        }
+                    }
+                    ?>
                     <a href="/" class="active">Home</a>
                     <a href="pages/About-Us.php">About</a>
                     <a href="pages/Contact Us.php">Contact</a>
