@@ -21,21 +21,21 @@
                 </div>
                 <div class="main-form-container">
                     
-                    <div class="mainForm" action="">
-                        <form id="login" class="formLogin" action="">  
+                    <div class="mainForm">
+                        <form id="login" class="formLogin" action="../backend/loginVerify.php" method = "POST">  
                             <h2>Login to your account</h2>
-                            <input type="text"  class="input-field"  placeholder="Email"/>
-                            <input type="password" class="input-field" placeholder="Password"/>
-                            <button type="submit" class="input-submit" onclick="validate(0);return false;">Login</button>
+                            <input type="text"  class="input-field" name = "login-email"  placeholder="Email"/>
+                            <input type="password" class="input-field" name = "login-password" placeholder="Password"/>
+                            <button type="submit" class="input-submit" name = "login-btn" onclick="validate(0);return false;">Login</button>
                         </form>
             
-                        <form id="register" class="formRegister hidden" action="">  
+                        <form id="register" class="formRegister hidden" action="../backend/loginVerify.php" method = "POST">  
                             <h2>Create a new account</h2>
-                            <input type="text"  class="input-field"  placeholder="Emri & Mbiemri"/>
-                            <input type="text"  class="input-field"  placeholder="Email"/>
-                            <input type="password" class="input-field" placeholder="Password"/>
+                            <input type="text"  class="input-field" name = "register-fullname" placeholder="Emri & Mbiemri"/>
+                            <input type="text"  class="input-field" name = "register-email"  placeholder="Email"/>
+                            <input type="password" class="input-field" name = "register-password" placeholder="Password"/>
                             <input type="password" class="input-field" placeholder="Confirm-Password"/>
-                            <button type="submit" class="input-submit"  onclick="validate(1);return false;">Register</button>
+                            <button type="submit" class="input-submit" name = "register-btn" onclick="validate(1);return false;">Register</button>
                         </form>
                     
                     </div>
