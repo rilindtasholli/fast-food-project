@@ -15,8 +15,6 @@ class SimpleUser extends Person
         $_SESSION['fullname'] = $this->getFullName();
         $_SESSION["role"] = "0";
         $_SESSION['roleName'] = "SimpleUser";
-        
-        
     }
 
     public function setCookie()

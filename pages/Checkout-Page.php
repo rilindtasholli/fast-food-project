@@ -68,13 +68,13 @@
                             $prodIndex++;
                         }
                         
-                        if($product[0]['prod_category'] == 0){
+                        if($product['prod_category'] == 0){
                             echo'
                                 <tr>
                                     <td hidden>'.$prodIndex.'</td>
-                                    <td class="tdImg"><img src="../'.$product[0]['prod_img'].'" width="85px" height="65px"></td>
-                                    <td class="tdName">'.$product[0]['prod_name'].'</td>
-                                    <td>€'.$product[0]['prod_price'].'</td>
+                                    <td class="tdImg"><img src="../'.$product['prod_img'].'" width="85px" height="65px"></td>
+                                    <td class="tdName">'.$product['prod_name'].'</td>
+                                    <td>€'.$product['prod_price'].'</td>
                                     <td><a class="removeButton" href="../backend/removeProduct.php?id='.$prodIndex.'">Remove</a></td>
                                 </tr>
                             ';
@@ -82,15 +82,15 @@
                             echo'
                                 <tr>
                                     <td hidden>'.$prodIndex.'</td>
-                                    <td class="tdImg"><img src="../'.$product[0]['prod_img'].'" width="35px" height="65px"></td>
-                                    <td class="tdName">'.$product[0]['prod_name'].'</td>
-                                    <td>€'.$product[0]['prod_price'].'</td>
+                                    <td class="tdImg"><img src="../'.$product['prod_img'].'" width="35px" height="65px"></td>
+                                    <td class="tdName">'.$product['prod_name'].'</td>
+                                    <td>€'.$product['prod_price'].'</td>
                                     <td><a class="removeButton" href="../backend/removeProduct.php?id='.$prodIndex.'">Remove</a></td>
                                 </tr>
                             ';
                         }
                         $prodIndex++;
-                        $TotalPrice += $product[0]['prod_price'];
+                        $TotalPrice += $product['prod_price'];
                     }
 
                   

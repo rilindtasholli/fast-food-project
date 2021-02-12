@@ -56,21 +56,45 @@ body{
     transition: 0.3s;
 }
 
-.logout-button{
-    border-radius: 10px;
-    background-color: rgb(241, 145, 0, 0.98);
+.Login-Register{
     padding: 10px 30px;
-    top: 25px;
+    cursor: pointer;
+    background: transparent;
+    border:0px;
     position: relative;
-    font-weight: 700;
-    text-decoration: none;
-    color: black;
+    outline: none; 
 }
 
-.logout-button:hover{
-    background-color: rgb(241, 145, 0, 0.84);
-    color: white;
+.button-at>button{
     transition: 0.3s;
+    font-weight: bold;
+}
+
+.button-at>button:hover{
+    transition: 0.4s;
+    background-color: rgb(241, 145, 0, 0.78);
+    font-weight: bold;
+}
+
+.login-button{
+    border-radius: 10px 0px 0px 10px;
+    background-color: rgba(216, 215, 215, 0.9);
+}
+
+.register-button{
+    border-radius: 0px 10px 10px 0px;
+    background-color: rgba(216, 215, 215, 0.9);
+}
+
+.clicked{
+    background-color: rgb(241, 145, 0, 0.9);
+}
+
+.formLogin, .formRegister{
+    top: 60px;
+    left: 50px;
+    width: 280px;
+    
 }
 
 
@@ -89,6 +113,46 @@ body{
 
 .hidden{
     display: none;
+}
+
+.input-field{
+    width: 100%;
+    padding: 10px 0; 
+    margin: 5px 0;
+    border-left: 0;
+    border-top:0 ;
+    border-right: 0;
+    border-bottom: 1px solid lightgray;
+    color: white;
+    outline: none;
+    background: transparent;
+}
+
+.input-submit{
+    cursor: pointer;
+    padding: 10px 50px;
+    display: block;
+    margin:auto;
+    background-color: rgb(241, 145, 0, 0.918);
+    border: 0;
+    border-radius: 20px;
+    margin-top: 7%;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.input-submit:hover{
+    background-color: rgb(241, 145, 0, 0.918);
+    color: white;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.input-submit:active{
+    background-color: rgb(241, 145, 0, 0.5);
+    color: white;
+    font-weight: 700;
+    transition: 0.1s;
 }
 
 .header-shadow{

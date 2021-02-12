@@ -91,7 +91,7 @@
                     <a href="/" class="active">Home</a>
                     <a href="pages/About-Us.php">About</a>
                     <a href="pages/Contact Us.php">Contact</a>
-                    <a href="pages/Account.php">Account</a> 
+                    <a href="pages/Login.php">Account</a> 
                 </ul>     
             </div>
         </header>
