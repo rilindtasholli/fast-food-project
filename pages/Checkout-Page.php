@@ -59,6 +59,7 @@
                     
 
                     $prodIndex = 0;
+                    $TotalPrice = 0;
 
                     foreach($cart as $prd_ID){
                         $product = $mapper->getProductbyID($prd_ID);
@@ -67,35 +68,38 @@
                             $prodIndex++;
                         }
                         
-                        if($product[0]['prod_category'] == 0){
+                        if($product['prod_category'] == 0){
                             echo'
                                 <tr>
                                     <td hidden>'.$prodIndex.'</td>
-                                    <td class="tdImg"><img src="../'.$product[0]['prod_img'].'" width="85px" height="65px"></td>
-                                    <td class="tdName">'.$product[0]['prod_name'].'</td>
-                                    <td>€'.$product[0]['prod_price'].'</td>
+                                    <td class="tdImg"><img src="../'.$product['prod_img'].'" width="85px" height="65px"></td>
+                                    <td class="tdName">'.$product['prod_name'].'</td>
+                                    <td>€'.$product['prod_price'].'</td>
                                     <td><a class="removeButton" href="../backend/removeProduct.php?id='.$prodIndex.'">Remove</a></td>
                                 </tr>
                             ';
-                        }else{
+                        }else{ // beacuse of image difference
                             echo'
                                 <tr>
                                     <td hidden>'.$prodIndex.'</td>
-                                    <td class="tdImg"><img src="../'.$product[0]['prod_img'].'" width="35px" height="65px"></td>
-                                    <td class="tdName">'.$product[0]['prod_name'].'</td>
-                                    <td>€'.$product[0]['prod_price'].'</td>
+                                    <td class="tdImg"><img src="../'.$product['prod_img'].'" width="35px" height="65px"></td>
+                                    <td class="tdName">'.$product['prod_name'].'</td>
+                                    <td>€'.$product['prod_price'].'</td>
                                     <td><a class="removeButton" href="../backend/removeProduct.php?id='.$prodIndex.'">Remove</a></td>
                                 </tr>
                             ';
                         }
                         $prodIndex++;
+                        $TotalPrice += $product['prod_price'];
                     }
 
+                  
+                    
                     echo '
                         <tr>
                             <th class="lastRow">Total</th>
                             <th></th> 
-                            <th>€25.60</th>
+                            <th>€'.$TotalPrice.'</th>
                             <th><a class="orderButton">Complete Order<img src="../img/cart.png" width="20px"></a></th>
                         </tr>
                                 

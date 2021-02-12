@@ -2,38 +2,60 @@ body{
     margin: 0;
     padding: 0; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url(../img/header-background/header-background-1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+
 }
-   
+
+.hidden{
+    display:none;
+}
+
 main{
-    border:solid 1px blue;
+    /*border:solid 1px blue;*/
     width: 99.9%;
     position: absolute;
-    top: 10%;
+    top:10%;
     left: 50%;
     transform: translate(-50%);
 }
 
-
-.productList{
-    border:solid 3px red;
-    width: auto;
-    margin: 10px 12vw;
+.button{
+    padding: 10px;
+    background-color: rgba(191, 191, 191, 0.98);
+    font-weight: 500;
+    border-radius: 10px;
+    border: solid 1px black;
+    cursor: pointer;
 }
 
+.clicked{
+    background-color: rgb(241, 145, 0, 0.98);
+    font-weight: 600;
+    border: solid 2px black;
+}
 
-.header-shadow{
-    width: 100%;
+.home-button{
+    border-radius: 0px 10px 10px 0px;
+    background-color: rgb(241, 145, 0, 0.98);
+    padding: 10px 30px;
+    top:10px;
+    position:absolute;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+    border:solid 1px gray;
+}
+
+.home-button:hover{
+    background-color: rgb(241, 145, 0, 0.84);
+    color: white;
+    transition: 0.3s;
+}
+
+.table{
+    margin-top:20px;
+    /*border:solid 3px red;*/
     
-    background-color: rgb(0, 0, 0, 0.7);
-    position: absolute;
-    z-index: -1;
 }
-   
 
 table {
     width: 100%;
@@ -52,31 +74,44 @@ th, td {
 .t01 tr:nth-child(odd) {
     background-color: #fff;
 }
-.t01 th {
+.t01 .th>td {
     background-color: black;
     color: white;
 }
 
-.productsTitle{
-    background-color:black;
+.usersTitle{
+    background-color: rgb(241, 145, 0, 0.98);
     margin:0;
     padding: 10px 0px;
-
-    color:white;
+    color:black;
     text-align:center;
     font-size:15pt;
+    border: solid 2px black;
 }
 
 .lastRow{
     height: 45px;
 }
 
-.orderButton{
-    background-color: rgb(227, 153, 5);
-    padding:15px;
+.detailsButton{
+    background-color: rgba(133, 133, 133);
+    padding:7px;
     border-radius: 10px;
     text-decoration: none;
     color: black;
+    font-weight: 500;
+
+    border: solid 1px rgb(0,0,0, 0.5);
+
+}
+
+.editButton{
+    background-color: rgba(102, 102, 102);
+    padding:7px 13px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
 
     border: solid 1px rgb(0,0,0, 0.5);
 
@@ -84,38 +119,17 @@ th, td {
 
 .removeButton{
     background-color: rgba(190, 33, 28, 0.952);
-    padding:10px;
+    padding:8px;
     border-radius: 10px;
     text-decoration: none;
     color: black;
     font-weight: 500;
-    transition: 0.8s;
 
     border: solid 1px rgb(0,0,0, 0.5);
 }
 
-.removeButton:active{
-    background-color: rgba(114, 22, 19, 0.952);
-    transition: 0.1s;
-}
 
-.addProductsButton{
-    background-color: rgba(247, 123, 21, 0.952);
-    padding:10px;
-    border-radius: 10px;
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
-    transition: 0.8s;
-
-    border: solid 1px rgb(0,0,0, 0.6);
-}
-
-.addProductsButton:active{
-    background-color: rgba(172, 85, 14, 0.952);
-    transition: 0.1s;
-}
-
+   
 .underline{
     margin-top: 10px;
     border-bottom: solid 2px rgb(241, 145, 0);
@@ -168,40 +182,12 @@ footer h2{
    
    @media(max-width: 800px){
       
-   
-        .main-container{
-         
-           top: 32%;
-       }
-   
-       .main-container h2{
-           width: 95%;
-       }
-   
-       .navigation-bar{
-           top: 8px;
-           right: 2%;
-           float: right;
-           
-       }
-       
-       ul{
-           display: flex;
-           justify-content: space-evenly;
-           list-style-type: none;
-       }
-       
-       .ul-list a{
-           
-           margin: 0px 8px;
-           font-size: 14px;
-      
-          
-       }
+    .table td{
+        font-size: 8pt;
+    }
    
        
    }
-   
    
    
    

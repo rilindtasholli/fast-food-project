@@ -12,35 +12,29 @@ class Admin extends Person
 
 
     public function setSession()
-    {   
-        
-        $_SESSION['username'] = $this->getUsername();
-        $_SESSION["role"] = 1;
+    {
+        $_SESSION['fullname'] = $this->getFullName();
+        $_SESSION['email'] = $this->getEmail();
+        $_SESSION["role"] = "1";
         $_SESSION['roleName'] = "Administrator";
-        
-       
     }
 
     public function setCookie()
     {
-        setcookie("username", $this->getUsername(), time() + 2 * 24 * 60 * 60);
+        setcookie("fullname", $this->getFullName(), time() + 2 * 24 * 60 * 60);
     }
 
-    public function getLastname()
+    public function getFullName()
     {
-        return $this->lastname;
-    }
-    public function getUsername()
-    {
-        return $this->username;
+        return $this->fullname;
     }
     public function getPassword()
     {
         return $this->password;
     }
-    public function getAge()
+    public function getEmail()
     {
-        return $this->age;
+        return $this->email;
     }
     public function getRole()
     {

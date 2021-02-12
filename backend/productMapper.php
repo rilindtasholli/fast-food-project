@@ -36,7 +36,7 @@ class ProductMapper extends DatabasePDOConfiguration
         $statement = $this->conn->prepare($this->query);
         $statement->bindParam(":ID", $ID);
         $statement->execute();
-        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        $result = $statement->fetch(PDO::FETCH_ASSOC);
         return $result;
     }
 
@@ -48,5 +48,18 @@ class ProductMapper extends DatabasePDOConfiguration
         $result = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $result;
     }
+
+    public function edit($id, $name, $price, $img, $category)
+    {
+        $this->query = "update products set prod_name=:name, prod_price=:price, prod_img=:img, prod_category=:category where prod_ID=:id";
+        $statement = $this->conn->prepare($this->query);
+        $statement->bindParam(":name", $name);
+        $statement->bindParam(":price", $price);
+        $statement->bindParam(":img", $img);
+        $statement->bindParam(":category", $category);
+        $statement->bindParam(":id", $id);
+        $statement->execute();
+    }
+
 
 }
