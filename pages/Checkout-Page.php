@@ -59,6 +59,7 @@
                     
 
                     $prodIndex = 0;
+                    $TotalPrice = 0;
 
                     foreach($cart as $prd_ID){
                         $product = $mapper->getProductbyID($prd_ID);
@@ -77,7 +78,7 @@
                                     <td><a class="removeButton" href="../backend/removeProduct.php?id='.$prodIndex.'">Remove</a></td>
                                 </tr>
                             ';
-                        }else{
+                        }else{ // beacuse of image difference
                             echo'
                                 <tr>
                                     <td hidden>'.$prodIndex.'</td>
@@ -89,13 +90,16 @@
                             ';
                         }
                         $prodIndex++;
+                        $TotalPrice += $product[0]['prod_price'];
                     }
 
+                  
+                    
                     echo '
                         <tr>
                             <th class="lastRow">Total</th>
                             <th></th> 
-                            <th>€25.60</th>
+                            <th>€'.$TotalPrice.'</th>
                             <th><a class="orderButton">Complete Order<img src="../img/cart.png" width="20px"></a></th>
                         </tr>
                                 
