@@ -62,7 +62,7 @@ class LoginLogic
             } else {
                 $obj = new SimpleUser($user['usr_ID'],$user['usr_fullname'], $user['usr_email'], $user['usr_password'], $user['usr_role']);
                 $obj->setSession();
-                header('Location:../pages/About-Us.php');
+                header('Location:../index.php');
             }
             return true;
         } else return false;
@@ -92,6 +92,6 @@ class RegisterLogic
 
         $mapper = new UserMapper();
         $mapper->insertUser($user);
-        header("Location:../pages/Account.php");
+        header("Location:../pages/Login.php");
     }
 }

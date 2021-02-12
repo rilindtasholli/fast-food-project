@@ -1,0 +1,89 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: whitesmoke;
+}
+h2{
+    color: white;
+}
+
+.home-button{
+    border-radius: 0px 10px 10px 0px;
+    background-color:whitesmoke;
+    padding: 10px 30px;
+    top: 40px;
+    position: relative;
+    font-weight: 800;
+    text-decoration: none;
+    color: black;
+}
+
+.home-button:hover{
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+}
+
+.formRegister{
+ display: flex;
+ flex-direction: column;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ position: absolute;
+ width: 400px;
+ border: solid 1px rgb(255, 255, 255, 0.4);
+ border-radius: 10px;
+ background:rgb(0, 0, 0, 0.7);
+ padding: 5px;
+ align-items: center;
+ margin-top: 30px;
+ margin-bottom: 50px;
+}
+
+.input-submit{
+    display: flex;
+    margin: 10px auto;
+    position: relative;
+    border-radius: 20px;
+}
+
+.input-field{
+    width: 100%;
+    padding: 10px 0; 
+    margin: 5px 0;
+    border-left: 0;
+    border-top:0 ;
+    border-right: 0;
+    border-bottom: 1px solid lightgray;
+    color: white;
+    outline: none;
+    background: transparent;
+}
+
+.input-submit{
+    cursor: pointer;
+    padding: 10px 50px;
+    display: block;
+    margin:auto;
+    background-color: white;
+    border: 0;
+    border-radius: 20px;
+    margin-top: 7%;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.input-submit:hover{
+    background-color:whitesmoke;
+    color: black;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.input-submit:active{
+    background-color: rgb(241, 145, 0, 0.5);
+    color: white;
+    font-weight: 700;
+    transition: 0.1s;
+}

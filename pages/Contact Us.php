@@ -49,9 +49,11 @@
               
               <form id="login" class="contact-container-form">  
                 
-                <input type="text" class="input-field"  placeholder="Full Name" />
+                <input type="text" class="input-field" name ="contact-fullname" placeholder="Full Name" />
                 
-                <input type="email"  class="input-field"  placeholder="Email" />
+                <input type="email"  class="input-field" name = "contact-email" placeholder="Email" />
+                
+                <input type="email"  class="input-field" name = "contact-subject" placeholder="Subject" />
                 
                 <textarea id="message" name="message" class="input-field" placeholder="Write a message..."></textarea>
                 <button type="submit" class="input-submit" onclick="validate();return false;">Submit</button>
