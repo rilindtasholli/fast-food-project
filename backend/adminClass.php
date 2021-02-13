@@ -13,6 +13,7 @@ class Admin extends Person
 
     public function setSession()
     {
+        $_SESSION['userID'] = $this->getID();
         $_SESSION['fullname'] = $this->getFullName();
         $_SESSION['email'] = $this->getEmail();
         $_SESSION["role"] = "1";
@@ -24,6 +25,10 @@ class Admin extends Person
         setcookie("fullname", $this->getFullName(), time() + 2 * 24 * 60 * 60);
     }
 
+    public function getID()
+    {
+        return $this->userid;
+    }
     public function getFullName()
     {
         return $this->fullname;

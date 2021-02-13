@@ -1,7 +1,7 @@
 <?php
 include_once 'adminClass.php';
 include_once 'simpleUserClass.php';
-require_once 'userMapper.php';
+require_once 'mappers/userMapper.php';
 session_start();
 
 if (isset($_POST['login-btn'])) {
