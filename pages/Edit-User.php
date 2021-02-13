@@ -10,7 +10,7 @@
 <body>
 
     <?php
-        include '../backend/userMapper.php';
+        include '../backend/mappers/userMapper.php';
 
         if (isset($_GET['id'])) {
             $userId = $_GET['id'];

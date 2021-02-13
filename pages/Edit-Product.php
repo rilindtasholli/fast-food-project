@@ -10,7 +10,7 @@
 <body>
 
     <?php
-        include '../backend/productMapper.php';
+        include '../backend/mappers/productMapper.php';
 
         if (isset($_GET['id'])) {
             $productId = $_GET['id'];

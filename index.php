@@ -102,7 +102,7 @@
 
                     <?php 
                     define('root', __DIR__);
-                    include_once (root . '/backend/productMapper.php');
+                    include_once (root . '/backend/mappers/productMapper.php');
 
                     
 
@@ -132,7 +132,7 @@
                         
                 <?php 
                    
-                    include_once (root . '/backend/productMapper.php');
+                    include_once (root . '/backend/mappers/productMapper.php');
                     
                     $mapper =  new ProductMapper();
                     $productList = $mapper->getDrinkProduct(); //drinks

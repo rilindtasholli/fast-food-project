@@ -1,6 +1,6 @@
 <?php
-include_once '../backend/userMapper.php';
-include_once '../backend/productMapper.php';
+include_once '../backend/mappers/userMapper.php';
+include_once '../backend/mappers/productMapper.php';
 
 session_start();
 
