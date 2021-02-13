@@ -10,7 +10,7 @@
    
     if(isset($_POST['addToCart'])){
         array_push($_SESSION['cart'],$_POST['prod_ID']);
-        header('Location: index.php?id='.$_POST['prod_ID']); //prevent adding product automatically to cart when refreshing
+        header('Location: index.php?#food-section'); //prevent adding product automatically to cart when refreshing
     }
    
     /*
