@@ -45,18 +45,31 @@
             <div class="contact-container">
              
                 <h3>Contact Us</h3>
+              <?php
+                include '../backend/mappers/messagesMapper.php';
+
+                if(isset($_POST['submit-btn'])){
+                    $fullname = $_POST['contact-fullname'];
+                    $email = $_POST['contact-email'];
+                    $subject = $_POST['contact-subject'];
+                    $message = $_POST['message'];
+                  
+                    $mapper = new MessagesMapper();
+                    $mapper->insertMessage($fullname,$email,$subject,$message);
+                    header("Location: Contact Us.php");
+                }
+              ?>
               
-              
-              <form id="login" class="contact-container-form">  
+              <form id="login" class="contact-container-form" method="POST">  
                 
                 <input type="text" class="input-field" name ="contact-fullname" placeholder="Full Name" />
                 
                 <input type="email"  class="input-field" name = "contact-email" placeholder="Email" />
                 
-                <input type="email"  class="input-field" name = "contact-subject" placeholder="Subject" />
+                <input type="text"  class="input-field" name = "contact-subject" placeholder="Subject" />
                 
                 <textarea id="message" name="message" class="input-field" placeholder="Write a message..."></textarea>
-                <button type="submit" class="input-submit" onclick="validate();return false;">Submit</button>
+                <button type="submit" class="input-submit" name = "submit-btn" onclick="validate();return false;">Submit</button>
               </form>
             </div>
            
@@ -79,16 +92,17 @@
               
               var emailInput = inputElements[1].value;
               var fullNameInput = inputElements[0].value;
-              var messageInput = inputElements[2].value;
-              if(emailInput == "" || fullNameInput == "" || messageInput == ""){
-                  alert("(Login Fail) - Ju lutem plotesoni hapesirat!");
+              var messageInput = inputElements[3].value;
+              var subjectInput = inputElements[2].value;
+              if(emailInput == "" || fullNameInput == "" || messageInput == "" || subjectInput == ""){
+                  alert("(Message failed) - Ju lutem plotesoni hapesirat!");
                   
                   return false; //prevent page refresh
                   
               }else{
                   
                   if(!emailRegex.test(emailInput)){
-                      alert("(Login Fail) - emaili nuk eshte valid");
+                      alert("(Message failed) - emaili nuk eshte valid");
                       return false; //prevent page refresh
                   }
                   else{
