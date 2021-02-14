@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/edit-page.css">
-    <title>Document</title>
+    <title>Edit Product</title>
 </head>
 <body>
-
+    <a id="home-button" class="home-button" href="Dashboard.php?id=products">Back</a>
     <?php
         include '../backend/mappers/productMapper.php';
 
@@ -27,7 +27,7 @@
                 
 
                 $mapper->edit($productId, $name, $price, $img, $category);
-                header("Location:../pages/dashboard.php");
+                header("Location:../pages/dashboard.php?id=products");
             }
 
         

@@ -1,4 +1,4 @@
-<div id="products" class="hidden table" >
+<div id="products" class=" table" >
             <h1 class="usersTitle">Products</h1>
             <table class="t01">
                 
@@ -8,7 +8,7 @@
                         <td>Name</td>
                         <td>Price</td>
                         <td>Edit</td>
-                        <td>Delete</td>
+                       
                     </tr>
                 
                 <tbody>
@@ -22,8 +22,7 @@
                             <td><?php echo $product['prod_price']; ?></td>
                             <td><a class="editButton" href=<?php echo "../pages/Edit-Product.php?id=" . $product['prod_ID'];
                                         ?>>Edit</td>
-                            <td><a class="removeButton" href=<?php echo "../backend/deleteProduct.php?id=" . $product['prod_ID'];
-                                        ?>>Delete</td>
+                            
                         </tr>
                     <?php
                     }

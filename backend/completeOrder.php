@@ -15,10 +15,11 @@
         $zip = $_SESSION['order'][3];
         $date = date("Y/m/d");
         $price = $_SESSION['order'][4];
+        $confirm = "Waiting to confirm";
         
+        $ordermapper->insertOrder($user, $fullname, $street, $city, $zip, $date, $price, $confirm);
 
-        $ordermapper->insertOrder($user, $fullname, $street, $city, $zip, $date, $price);
-        $order = $ordermapper->getLastOrderByUserID($user); //get the most recent ord_ID created
+        $order = $ordermapper->getLastOrderByUserID($user); //get the most recent ord_ID created by user
         $orderID = $order['ord_ID'];
         foreach ($_SESSION["cart"] as $product) {
             $orderproductmapper->insertOrderProduct($orderID,$product); //add products from 'CART' to the order_produkt table
@@ -26,7 +27,6 @@
        
         unset($_SESSION["order"]);
         unset($_SESSION["cart"]);
-        
         
         header("Location: ../index.php");
 

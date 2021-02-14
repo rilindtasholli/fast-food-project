@@ -4,6 +4,6 @@ if (isset($_GET['id'])) {
     $userId = $_GET['id'];
     $mapper = new MessagesMapper();
     $mapper->deleteMessages($userId);
-    header("Location:../pages/Dashboard.php");
+    header("Location:../pages/Dashboard.php?id=messages");
 }
 

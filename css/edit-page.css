@@ -9,18 +9,19 @@ h2{
 
 .home-button{
     border-radius: 0px 10px 10px 0px;
-    background-color:whitesmoke;
+    background-color:gray;
     padding: 10px 30px;
     top: 40px;
     position: relative;
     font-weight: 800;
     text-decoration: none;
-    color: black;
+    color: white;
+    border:solid 2px rgb(0, 0, 0, 0.6);
 }
 
 .home-button:hover{
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     transition: 0.3s;
 }
 

@@ -17,7 +17,7 @@ body{
 }
 
 main{
-    border:solid 1px blue;
+    /*border:solid 1px blue;*/
     width: 99.9%;
     position: absolute;
     top: 10%;
@@ -44,7 +44,7 @@ main{
 }
 
 .productList{
-    border:solid 3px red;
+    /*border:solid 3px red;*/
     width: auto;
     margin: 10px 12vw;
 }
@@ -282,6 +282,31 @@ footer h2{
     font-size: 15pt;
 }
 
+.finish-wait-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    height: 220px;
+    background-color: rgba(226, 91, 0, 0.9);
+    border-radius: 100px;
+    color: lightyellow;
+    font-weight: bold;
+    border: 2px solid  rgba(5, 2, 0, 0.645);
+}
+
+.finish-wait-text{
+    border-radius: 7px;
+    text-decoration: none;
+    color: white;
+    font-size: 13pt;
+}
+
 .hidden{
     display:none;
 }
@@ -307,7 +332,12 @@ footer h2{
         top: 25%;
         margin: 0 auto;
     }
-   
+
+    .finish-wait-container{
+        width: 95%;
+    }
+    
+
    
     .container{
         background-image: url(/img/burger-fries.jpg);
@@ -335,6 +365,7 @@ footer h2{
    
    @media(max-width: 555px){
       
+
    
         td{
            font-size:10pt;

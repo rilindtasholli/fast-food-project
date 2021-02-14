@@ -12,9 +12,10 @@ class SimpleUser extends Person
 
     public function setSession()
     {
+        $_SESSION['userID'] = $this->getID();
         $_SESSION['fullname'] = $this->getFullName();
+        $_SESSION['email'] = $this->getEmail();
         $_SESSION["role"] = "0";
-        $_SESSION['roleName'] = "SimpleUser";
     }
 
     public function setCookie()
@@ -22,6 +23,10 @@ class SimpleUser extends Person
         setcookie("fullname", $this->getFullName(), time() + 2 * 24 * 60 * 60);
     }
 
+    public function getID()
+    {
+        return $this->userid;
+    }
     public function getFullName()
     {
         return $this->fullname;

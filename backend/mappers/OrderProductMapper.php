@@ -45,6 +45,13 @@ class OrderProductMapper extends DatabasePDOConfiguration
         $statement->execute();
     }
 
+    public function deleteProductsByOrderID($ID){
+        $this->query = "delete from order_product where orderID = :ID";
+        $statement = $this->conn->prepare($this->query);
+        $statement->bindParam(":ID", $ID);
+        $statement->execute();
+    }
+
    
 
 }
