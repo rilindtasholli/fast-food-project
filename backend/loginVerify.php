@@ -25,21 +25,23 @@ class LoginLogic
         $this->password = $formData['login-password'];
     }
 
+   
     public function verifyData()
     {
         
         if ($this->variablesNotDefinedWell($this->email, $this->password)) {
             echo '1';
-            header("Location:../pages/Contact-Us.php");
+            header("Location:../pages/Login.php?id=error");
         }
          if ($this->usernameAndPasswordCorrect($this->email, $this->password)) {
             echo '1';
            
         } else {
             echo '2';
-            header("Location:../error.php");
+            header("Location:../pages/Login.php?id=error");
         }
     }
+
 
     private function variablesNotDefinedWell($email, $password)
     {
@@ -49,12 +51,13 @@ class LoginLogic
         return false;
     }
 
+
     private function usernameAndPasswordCorrect($email, $password)
     {
         $mapper = new UserMapper();
         $user = $mapper->getUserByEmail($email);
         if ($user == null || count($user) == 0) return false;
-        else if (password_verify($password, $user['usr_password'])) { // shtim i login-password...
+        else if (password_verify($password, $user['usr_password'])) { 
             if ($user['usr_role'] == 1) {
                 $obj = new Admin($user['usr_ID'],$user['usr_fullname'], $user['usr_email'], $user['usr_password'], $user['usr_role']);
                 $obj->setSession();
@@ -85,13 +88,23 @@ class RegisterLogic
        
     }
 
+
     public function insertData()
     {
      
         $user = new SimpleUser($userid,$this->fullname, $this->email ,$this->password ,0);
 
         $mapper = new UserMapper();
-        $mapper->insertUser($user);
-        header("Location:../pages/Login.php");
+        $emailExists = $mapper->emailExist($user->getEmail());
+        $emailExists;
+      
+        if($emailExists == true){
+            header("Location:../pages/Login.php?id=email");
+        }else{
+            $mapper->insertUser($user);
+            header("Location:../pages/Login.php");
+        }
+        
+       
     }
 }
