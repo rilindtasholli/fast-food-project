@@ -26,6 +26,10 @@
                 include_once ('..\backend\mappers\productMapper.php');
                 include ('..\backend\removeProduct.php');
 
+                if(!(isset($_SESSION['userID']))){ 
+                    echo '<script>window.location.href = "Login.php";</script>';
+                }
+
                 $cart = $_SESSION['cart'];
 
                 if(count($cart) == 0){

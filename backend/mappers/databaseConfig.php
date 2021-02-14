@@ -6,7 +6,7 @@ class DatabasePDOConfiguration
 
     private $host = "localhost";
     private $username = "root";
-    private $dbName = "fast_food_dbs";
+    private $dbName = "fast-food-test";
     private $password = "";
 
     protected function getConnection()
@@ -29,7 +29,7 @@ class DatabaseMySQLiConfiguration
 
     private $host = "localhost";
     private $username = "root";
-    private $dbName = "fast_food_dbs";
+    private $dbName = "fast-food-test";
     private $password = "";
 
     public function __construct()

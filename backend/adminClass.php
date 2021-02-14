@@ -6,7 +6,7 @@ class Admin extends Person
 {
     public function __construct($userid, $username, $password, $age, $role)
     {
-        parent::__construct($userid, $username, $password, $age, $role); //equivalent to super in java
+        parent::__construct($userid, $username, $password, $age, $role); 
         
     }
 
@@ -43,5 +43,15 @@ class Admin extends Person
     public function getRole()
     {
         return $this->role;
+    }
+
+    public function emailExist()
+    {
+        $this->query = "select exists(select 1 from users where usr_email = :email";
+        $statement = $this->conn->prepare($this->query);
+        $statement->bindParam(":email", $this->$email);
+        $statement->execute();
+        $result = $statement->fetch(PDO::FETCH_ASSOC);
+        return $result; //return 1 if true 0 if false
     }
 }

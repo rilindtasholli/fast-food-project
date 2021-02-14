@@ -1,14 +1,15 @@
 <?php
-include_once 'personClass.php';
+require_once 'personClass.php';
+
 
 class SimpleUser extends Person
 {
-    //private $lastname;
-    public function __construct($userid, $fullname, $email,$password ,$role, /*$lastname*/)
+    public function __construct($userid, $username, $password, $age, $role)
     {
-        parent::__construct($userid, $fullname, $email,$password, $role);
-        //$this->lastname = $lastname;
+        parent::__construct($userid, $username, $password, $age, $role); 
+        
     }
+
 
     public function setSession()
     {
@@ -43,4 +44,6 @@ class SimpleUser extends Person
     {
         return $this->role;
     }
+
+    
 }

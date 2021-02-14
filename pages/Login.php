@@ -4,6 +4,7 @@
     if(isset($_SESSION['fullname'])){
         header("Location: Account.php");
     }
+
 ?>
 <!DOCTYPE html>
 
@@ -50,6 +51,17 @@
            </div>
             
         </div>
+        <?php
+            if(isset($_GET['id'])){
+                
+                if($_GET['id'] == "email"){
+                    echo '<script>alert("Error: Ju lutem provoni nje email tjeter sepse ky email ekziston!");</script>';
+                }
+                else if($_GET['id'] == "error"){
+                    echo '<script>alert("Error: Keni shtypur te dhenat gabim!");</script>';
+                }
+            }
+        ?>
         <?php include '../components/footer.php';?>      
         
     </body>

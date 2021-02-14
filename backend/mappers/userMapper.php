@@ -87,6 +87,21 @@ class UserMapper extends DatabasePDOConfiguration
         $statement->execute();
     }
 
+    public function emailExist($email)
+    {
+        $this->query = "select * from users where usr_email = :email";
+        $statement = $this->conn->prepare($this->query);
+        $statement->bindParam(":email", $email);
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        if(count($result) == 0){
+            return false;
+        }else{
+            return true;
+        }
+        
+    }
+
 
 
 }
