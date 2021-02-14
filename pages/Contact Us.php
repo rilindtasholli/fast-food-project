@@ -106,7 +106,7 @@
                       return false; //prevent page refresh
                   }
                   else{
-                      alert("Message sent successfully!");
+                      //alert("Message sent successfully!");
                   }
                   
               }

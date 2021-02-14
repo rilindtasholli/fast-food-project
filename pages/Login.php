@@ -96,7 +96,7 @@
                         alert("(Login Fail) - emaili nuk eshte valid");
                         return false; //prevent page refresh
                     }else{
-                        alert("Login successful");
+                        //alert("Login successful");
                     }
                     
                 }
@@ -133,7 +133,7 @@
                     }
 
 
-                    alert("Register successful");
+                    
                     changeForm(0);
                 }
                 event.defaultPrevented();

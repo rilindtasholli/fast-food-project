@@ -13,9 +13,13 @@
 
             <a id="home-button" class="home-button" href="../index.php">Home</a>
 
+            <div id="finish" class="finish-wait-container hidden">
+                <img src="../img/cart.png" width="60px"></img>
+                <p class="finish-wait-text">Finishing Order - Please Wait...</p>
+            </div>   
         <main>
-                        
-                        
+                   
+                              
 
                 <?php
 
@@ -109,18 +113,23 @@
                     
 
                     if(isset($_POST['complete-order-btn'])){
+                        
+                        echo '<script>document.getElementById("address").classList.add("hidden");</script>';
+
                         $_SESSION['order'] = array();
                         array_push($_SESSION['order'], $_POST['address-fullname']);
                         array_push($_SESSION['order'], $_POST['address-street']);
                         array_push($_SESSION['order'], $_POST['address-city']);
                         array_push($_SESSION['order'], $_POST['address-zip']);
                         array_push($_SESSION['order'], $TotalPrice);
-                    }
 
-                    if(isset($_SESSION['order'])){
-                        header("Location: ../backend/completeOrder.php");
+                        echo '<script>
+                        window.location.href = "../backend/completeOrder.php";
+                        document.getElementById("products").classList.add("hidden");
+                        document.getElementById("finish").classList.remove("hidden");  
+                        </script>';
+                        
                     }
-
 
                     echo 
                     '
@@ -135,7 +144,7 @@
                                 <input type="text"  class="input-field" name = "address-city" placeholder="City" />
                                 <input type="text"  class="input-field" name = "address-zip" placeholder="Zip Code" />
 
-                                <button hidden id="orderButton" type="submit"  name = "complete-order-btn" >complete order</button>
+                                <button hidden id="orderButton" type="submit"  name="complete-order-btn">complete order</button>
                             </form>
                         </div>
                         <div class="finish-order-container">
@@ -144,21 +153,19 @@
                                 <p class="totalPrice">Total €'.$TotalPrice.'</p>
                                 
                                 <div>
-                                <a class="completeOrderButton" onclick="completeOrder()" >Complete Order<img src="../img/cart.png" width="20px"></a>
+                                <a class="completeOrderButton" onclick="validate()" >Complete Order<img src="../img/cart.png" width="20px"></a>
                                 </div>
     
                             
                         </div>
                     </div>
+                   
+                        
                     ';
                 }
                 
-
-                    
-                ?>
-
-           
-                        
+                ?>      
+      
             
         </main>
         
@@ -177,8 +184,64 @@
 
         
         function completeOrder(){
-            document.getElementById("orderButton").click()
+            document.getElementById("orderButton").click();
         }
 
+
+        function login(){
+            document.getElementById("login").classList.remove("hidden");
+            document.getElementById("register").classList.add("hidden");
+
+            document.getElementById("login-button").classList.add("clicked");
+            document.getElementById("register-button").classList.remove("clicked");
+        }
+
+        function register(){
+            document.getElementById("register").classList.remove("hidden");
+            document.getElementById("login").classList.add("hidden");
+
+            document.getElementById("register-button").classList.add("clicked");
+            document.getElementById("login-button").classList.remove("clicked");
+        }
+
+
+        
+
+        function validate(){
+        
+            const fullNameRegex =  /^([\w]{3,})+\s+([\w\s]{3,})+$/i;
+            const zipCodeRegex = /^[0-9]*$/;
+
+            var inputElements = document.getElementsByClassName('input-field');
+                
+            var fullNameInput = inputElements[0].value;
+            var streetInput = inputElements[1].value;
+            var cityInput = inputElements[2].value;
+            var zipInput = inputElements[3].value;
+
+            if(fullNameInput == "" || streetInput == "" || cityInput == "" || zipInput == ""){
+                alert("Ju lutem plotesoni te gjitha hapesirat!");
+                return false; //prevent page refresh
+            }else{
+                
+                if(!fullNameRegex.test(fullNameInput)){
+                    alert("Emri dhe Mbiemri nuk jane valid!");
+                    return false; //prevent page refresh
+                }
+                else if(!zipCodeRegex.test(zipInput)){
+                    alert("Zip Code eshte dhene gabim");
+                    return false; //prevent page refresh
+                }else{
+                    completeOrder()
+                }
+            }
+            event.defaultPrevented();
+           
+                
+        }
+             
+    
+       
+    
     </script>
 </html>

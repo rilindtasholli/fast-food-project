@@ -18,10 +18,12 @@
            <div class="main-container">
                 
                 <div class="main-form-container">
-                    
+               
                      <div class="mainForm">
                         <a style="color:white;"><?php session_start(); echo $_SESSION['fullname']?></a>
                         <a style="color:gray;"><?php echo $_SESSION['email']?></a>
+                        <?php echo '<a class="ordersButton" href="View-Orders.php?id='.$_SESSION['userID'].'">My Orders</a>'?>
+                        
 
                         <a class="logout-button" href="../backend/logout.php">Logout</a>
                     </div>

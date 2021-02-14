@@ -61,6 +61,7 @@ body{
     background-color: rgb(241, 145, 0, 0.98);
     padding: 10px 30px;
     top: 25px;
+    margin-top: 50px;
     position: relative;
     font-weight: 700;
     text-decoration: none;
@@ -69,6 +70,23 @@ body{
 
 .logout-button:hover{
     background-color: rgb(241, 145, 0, 0.84);
+    color: white;
+    transition: 0.3s;
+}
+
+.ordersButton{
+    border-radius: 10px;
+    background-color: rgba(243, 243, 243, 0.84);
+    padding: 10px 30px;
+    top: 25px;
+    position: relative;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+}
+
+.ordersButton:hover{
+    background-color: rgba(199, 199, 199, 0.84);
     color: white;
     transition: 0.3s;
 }

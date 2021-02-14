@@ -11,11 +11,7 @@ body{
 
 main{
     /*border:solid 1px blue;*/
-    width: 99.9%;
-    position: absolute;
-    top:10%;
-    left: 50%;
-    transform: translate(-50%);
+margin-top: 80px;
 }
 
 .button{
@@ -25,6 +21,8 @@ main{
     border-radius: 10px;
     border: solid 1px black;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
 
 .clicked{
@@ -52,7 +50,7 @@ main{
 }
 
 .table{
-    margin-top:20px;
+    margin-top:50px;
     /*border:solid 3px red;*/
     
 }
@@ -102,7 +100,6 @@ th, td {
     font-weight: 500;
 
     border: solid 1px rgb(0,0,0, 0.5);
-
 }
 
 .editButton{
@@ -114,7 +111,6 @@ th, td {
     font-weight: 500;
 
     border: solid 1px rgb(0,0,0, 0.5);
-
 }
 
 .removeButton{
@@ -129,6 +125,16 @@ th, td {
 }
 
 
+.confirmButton{
+    background-color: rgba(68, 155, 60, 0.952);
+    padding:8px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+
+    border: solid 1px rgb(0,0,0, 0.5);
+}
    
 .underline{
     margin-top: 10px;

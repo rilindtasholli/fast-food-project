@@ -1,4 +1,4 @@
-<div id="messages" class="hidden table" >
+<div id="messages" class=" table" >
             <h1 class="usersTitle">Messages</h1>
             <table class="t01">
                 

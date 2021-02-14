@@ -17,7 +17,6 @@ class Admin extends Person
         $_SESSION['fullname'] = $this->getFullName();
         $_SESSION['email'] = $this->getEmail();
         $_SESSION["role"] = "1";
-        $_SESSION['roleName'] = "Administrator";
     }
 
     public function setCookie()
