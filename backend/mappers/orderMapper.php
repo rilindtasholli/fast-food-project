@@ -31,6 +31,7 @@ class OrderMapper extends DatabasePDOConfiguration
         return $result;
     }
 
+
     public function getOrdersbyUserID($ID)
     {
         $this->query = "select * from orders where ord_user=:ID";
@@ -41,6 +42,22 @@ class OrderMapper extends DatabasePDOConfiguration
         return $result;
     }
 
+    public function orderExists($userID,$orderID)
+    {
+        $this->query = "select * from orders where ord_user = :userID and ord_ID = :orderID";
+        $statement = $this->conn->prepare($this->query);
+        $statement->bindParam(":userID", $userID);
+        $statement->bindParam(":orderID", $orderID);
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        if(count($result) == 0){
+            return false;
+        }else{
+            return true;
+        }
+        
+    }
+    
     public function getLastOrderByUserID($userID)
     {
         $this->query = "select * from orders where ord_ID=(select max(ord_ID) from orders where ord_user = :userID) ";
