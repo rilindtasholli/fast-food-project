@@ -3,14 +3,22 @@ include_once '../backend/mappers/OrderProductMapper.php';
 include_once '../backend/mappers/orderMapper.php';
 session_start();
 
+
+
 if (isset($_GET['id'])) {
     $orderID = $_GET['id'];
-    
+    $ordermapper = new orderMapper();
+    $order = $ordermapper->getOrderbyID($orderID);
+
+        if($ordermapper->orderExists($_SESSION['userID'],$orderID )==false){
+            header("Location: ../index.php");
+        }
+
+
     $productmapper = new OrderProductMapper();
     $productList = $productmapper->getProductsByOrderID($orderID);
 
-    $ordermapper = new orderMapper();
-    $order = $ordermapper->getOrderbyID($orderID);
+    
 }
 
 

@@ -1,7 +1,13 @@
 <?php
 include_once 'mappers/orderMapper.php';
 include_once 'mappers/OrderProductMapper.php';
-if (isset($_GET['id'])) {
+session_start();
+if($_SESSION['role']==0){
+    header("Location:../index.php");
+}
+
+else{
+    if (isset($_GET['id'])) {
     $orderId = $_GET['id'];
 
     $orderproductmapper = new OrderProductMapper();
@@ -11,5 +17,5 @@ if (isset($_GET['id'])) {
     $ordermapper->deleteOrder($orderId);
 
     header("Location:../pages/Dashboard.php?id=orders");
+    }
 }
-

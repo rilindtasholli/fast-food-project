@@ -3,13 +3,16 @@ include_once '../backend/mappers/OrderProductMapper.php';
 include_once '../backend/mappers/orderMapper.php';
 session_start();
 
+if($_SESSION['userID']!=$_GET['id']){
+    header("Location: ../index.php");
+}
+
 if (isset($_GET['id'])) {
     $userID = $_GET['id'];
 
     $ordermapper = new orderMapper();
     $ordersList = $ordermapper->getOrdersbyUserID($userID);
 }
-
 
 ?>
 <head>
