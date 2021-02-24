@@ -1,11 +1,11 @@
 
 <!DOCTYPE html>
-
+<?php session_start(); ?>
 <html>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>&copy; Star-Food | Account</title>
+        <title>&copy; Account | <?php echo $_SESSION['fullname'] ?></title>
         <link rel="stylesheet" href="../css/account-page.css">
     </head>
     
@@ -20,7 +20,7 @@
                 <div class="main-form-container">
                
                      <div class="mainForm">
-                        <a style="color:white;"><?php session_start(); echo $_SESSION['fullname']?></a>
+                        <a style="color:white;"><?php echo $_SESSION['fullname']?></a>
                         <a style="color:gray;"><?php echo $_SESSION['email']?></a>
                         <?php echo '<a class="ordersButton" href="View-Orders.php?id='.$_SESSION['userID'].'">My Orders</a>'?>
                         

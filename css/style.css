@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
 }
 
 #goTop{
@@ -294,6 +295,12 @@ main{
     .ul-list a{
         margin: 0px 8px;
         font-size: 13px;
+    }
+
+    #slideshow > div >img {
+        width:unset;
+        height: 100vh;
+       
     }
 
     .header-text{
