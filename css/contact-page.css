@@ -1,4 +1,4 @@
-*{
+body{
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -68,7 +68,6 @@ ul{
 .mainDiv{
     display: flex;
     align-items: center;
-    width: 90%;
     position: absolute;
     top: 50%;
     left: 50%;

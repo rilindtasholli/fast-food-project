@@ -1,0 +1,384 @@
+body{
+    margin: 0;
+    padding: 0; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(../img/header-background/header-background-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.header-shadow{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.7);
+
+}
+
+main{
+    /*border:solid 1px blue;*/
+    width: 99.9%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.home-button{
+    border-radius: 0px 10px 10px 0px;
+    background-color: rgb(241, 145, 0, 0.98);
+    padding: 10px 30px;
+    top:10px;
+    position:absolute;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+    border:solid 1px gray;
+}
+
+.home-button:hover{
+    background-color: rgb(241, 145, 0, 0.84);
+    color: white;
+    transition: 0.3s;
+}
+
+.productList{
+    /*border:solid 3px red;*/
+    width: auto;
+    margin: 10px 12vw;
+}
+
+
+.header-shadow{
+    width: 100%;
+    
+    background-color: rgb(0, 0, 0, 0.7);
+    position: absolute;
+    z-index: -1;
+}
+   
+
+table {
+    width: 100%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px 5px;
+    text-align: center;
+}
+.t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+.t01 tr:nth-child(odd) {
+    background-color: #fff;
+}
+.t01 th {
+    background-color: black;
+    color: white;
+}
+
+.productsTitle{
+    background-color:black;
+    margin:0;
+    padding: 10px 0px;
+
+    color:white;
+    text-align:center;
+    font-size:15pt;
+}
+
+.lastRow{
+    height: 45px;
+}
+
+.removeAllButton{
+    background-color: rgba(162, 30, 25, 0.952);
+    padding:10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 10pt;
+    transition: 0.8s;
+
+    border: solid 1px rgb(0,0,0, 0.5);
+}
+
+.removeButton{
+    background-color: rgba(190, 33, 28, 0.952);
+    padding:10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: 0.8s;
+
+    border: solid 1px rgb(0,0,0, 0.5);
+}
+
+.removeButton:active{
+    background-color: rgba(114, 22, 19, 0.952);
+    transition: 0.1s;
+}
+
+.addProductsButton{
+    background-color: rgba(247, 123, 21, 0.952);
+    padding:10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: 0.8s;
+
+    border: solid 1px rgb(0,0,0, 0.6);
+}
+
+.addProductsButton:active{
+    background-color: rgba(172, 85, 14, 0.952);
+    transition: 0.1s;
+}
+
+.underline{
+    margin-top: 10px;
+    border-bottom: solid 2px rgb(241, 145, 0);
+}
+   
+footer h2{
+    font-size:5pt;
+}
+
+
+/*-----------address-------------*/
+.address-div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.address-container{
+    display: flex;
+    flex-direction: column;
+    width: 590px;
+    height: 430px;
+    border: 1px solid black;
+    margin: 20px;
+    background-color: rgb(0, 0, 0, 0.9);
+    border-radius: 15px;
+    color: lightyellow;
+    font-weight: bold;
+    border: 2px solid  rgb(145, 145, 145);
+}
+.address-container h3{
+    color: rgb(227, 153, 5);
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 23px;
+    border-bottom: solid 2px rgb(227, 153, 5);
+    width: 80%;
+}
+
+
+.address-container-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    border-radius: 15px;
+    color: lightyellow;
+    font-weight: bold;
+
+}
+
+.input-field{
+    width: 80%;
+    padding: 10px 0 10px 10px; 
+    margin: 7px 0;
+    border-left: 0;
+    border-top:0;
+    border-right: 0;
+    border-bottom: 1px solid lightyellow;
+    outline: none;
+    color:lightyellow;
+    background: transparent;
+    font-size: 15px;
+}
+
+.input-submit{
+    margin-top: 85px;
+    width: 100px;
+    height: 40px;
+    background: rgb(241, 145, 0, 0.84);
+    color: black;
+    transition: 0.4s;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.input-submit:hover{
+    background: rgb(241, 145, 0, 0.84);
+    font-weight: bold;
+    color: white;
+}
+
+.finish-order-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 590px;
+    padding-bottom: 50px;
+    border: 1px solid black;
+    background-color: rgb(0, 0, 0, 0.9);
+    border-radius: 15px;
+    color: lightyellow;
+    font-weight: bold;
+    border: 2px solid  rgb(145, 145, 145);
+}
+
+.completeOrderButton{
+    background-color: rgb(227, 153, 5);
+    padding:15px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    border: solid 1px rgb(0,0,0, 0.5);
+    cursor: pointer;
+}
+
+.continueOrderButton{
+    background-color: rgb(227, 153, 5);
+    padding:15px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    border: solid 1px rgb(0,0,0, 0.5);
+    cursor: pointer;
+}
+
+.goBackToCartButton{
+    background-color: rgb(227, 153, 5);
+    padding:15px;
+    margin: 10px auto;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    border: solid 1px rgb(0,0,0, 0.5);
+    cursor: pointer;
+}
+
+.totalPrice{
+    background-color: white;
+    padding:12px;
+    border-radius: 7px;
+    text-decoration: none;
+    color: black;
+    font-size: 15pt;
+}
+
+.finish-wait-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    height: 220px;
+    background-color: rgba(226, 91, 0, 0.9);
+    border-radius: 100px;
+    color: lightyellow;
+    font-weight: bold;
+    border: 2px solid  rgba(5, 2, 0, 0.645);
+}
+
+.finish-wait-text{
+    border-radius: 7px;
+    text-decoration: none;
+    color: white;
+    font-size: 13pt;
+}
+
+.hidden{
+    display:none;
+}
+   
+   
+   /*------------------media------------------*/
+   
+   @media(max-width: 705px){
+
+    .address-container{
+        width: 95%;
+        position: relative;
+        top: 25%;
+    }
+    .finish-order-container{
+        width: 95%;
+        position: relative;
+        top: 25%;
+    }
+    .productList{
+        width: 95%;
+        position: relative;
+        top: 25%;
+        margin: 0 auto;
+    }
+
+    .finish-wait-container{
+        width: 95%;
+    }
+    
+
+   
+    .container{
+        background-image: url(/img/burger-fries.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        width: 100%;
+        height: 1200px;
+    
+    }
+   
+   
+    .header-shadow{
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 0, 0, 0.7);
+    
+    }
+   
+   
+       
+      
+   }
+   
+   @media(max-width: 555px){
+      
+
+   
+        td{
+           font-size:10pt;
+       }
+   
+       .address-container h2{
+           width: 95%;
+       }
+
+   
+       
+   }
+   
+   
+   
+   
