@@ -26,7 +26,7 @@ if (isset($_GET['id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> &copy; Star-Food | Order Food Online </title>
+    <title> &copy; Order Products</title>
     <link rel="stylesheet" href="../css/dashboard.css"/>
 </head>
 <body>

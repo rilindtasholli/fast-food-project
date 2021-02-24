@@ -27,6 +27,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> &copy; Star-Food | Order Food Online </title>
         <link rel="stylesheet" href="css/style.css"/>
+
+        <style>
+            html{
+                scroll-behavior: smooth;
+            }
+        </style>
     </head>
 
     <body>
