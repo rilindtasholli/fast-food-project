@@ -4,7 +4,7 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .container{
-    background-image: url('../img/burger-fries.jpg');
+    background-image: url(../img/header-background/header-background-1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
