@@ -35,6 +35,7 @@ function goTopFunction() {
 
 
 
+<<<<<<< HEAD
 
 function goToCheckOut(){
     window.location.href='pages/checkout-page.php';
@@ -44,3 +45,5 @@ function goToCheckOut(){
 
 
 
+=======
+>>>>>>> master

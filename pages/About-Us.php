@@ -11,10 +11,10 @@
     <body>
         
             <div class="container">
-
-            
+                    
                 <div class="header-shadow">
                 </div>
+
                 <div class="navigation-bar">
                   <ul class="ul-list">
                       <a href="../index.php">Home</a>

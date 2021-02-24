@@ -14,7 +14,11 @@
         <div class="header-shadow">
         </div>
        <div class="container">
+<<<<<<< HEAD
         <a id="home-button" class="home-button" href="../index.php">Home</a>
+=======
+            <a id="home-button" class="home-button" href="../index.php">Home</a>
+>>>>>>> master
            <div class="main-container">
                 
                 <div class="main-form-container">
